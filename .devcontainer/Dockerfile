@@ -49,6 +49,13 @@ ARG NODE_MODULES="eslint tslint-to-eslint-config typescript ts-node"
 RUN npm install -g ${NODE_MODULES} && \
   npm cache clean --force > /dev/null 2>&1
 
+#
+# Develop Visual Studio Code extension
+# https://code.visualstudio.com/api/get-started/your-first-extension
+#
+RUN npm install -g yo generator-code && \
+  npm cache clean --force > /dev/null 2>&1
+
 USER ${user_name}
 WORKDIR /home/${user_name}
 

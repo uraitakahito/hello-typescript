@@ -46,7 +46,8 @@ RUN chown -R ${user_id}:${group_id} ${home}
 # TypeScript
 #
 ARG NODE_MODULES="eslint tslint-to-eslint-config typescript ts-node"
-RUN npm install -g ${NODE_MODULES}
+RUN npm install -g ${NODE_MODULES} && \
+  npm cache clean --force > /dev/null 2>&1
 
 USER ${user_name}
 WORKDIR /home/${user_name}

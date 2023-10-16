@@ -124,7 +124,7 @@ if (poem2.type == "pages" ) {
 poem2.pages; // error
 ```
 
-複数の型を同時に満たす型、すなわち **交差型(intersection type)**を記述するのに&が使われます。
+複数の型を同時に満たす型、すなわち **交差型(intersection type)** を記述するのに&が使われます。
 
 ```typescript
 type Artwork = {

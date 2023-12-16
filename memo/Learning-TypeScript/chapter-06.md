@@ -6,3 +6,13 @@ TypeScriptではas const演算子が提供されています。これはconstア
 const unionArray = [1157, "Tomoe"]; // (string | number)[]
 const readonlyTuple = [1157, "Tomoe"] as const; // readonly [1157, "Tomoe"]
 ```
+
+## タプル
+
+JavaScriptの配列は、理論的にはどのサイズにもなれますが、固定サイズの配列、つまりタプル(tuple)、を使うのが便利な場合もあります。タプルは、それぞれのインデックスにおいて決まった型を持ちます。これは、配列のすべてのメンバーの取り得るかたの合併型よりも限定された型です。
+
+```typescript
+let yearAndWarrior: [number, string];
+yearAndWarrior = [530, "Tomyris]; // Ok
+yearAndWarrior = [false, "Tomyris"]; // NG
+```

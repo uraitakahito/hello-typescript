@@ -1,3 +1,4 @@
+## 合併型
 
 「どちらか１つ」と言う型は、 **合併型(union type)** と呼ばれます。合併型の宣言の順序は重要でありません。
 
@@ -8,12 +9,22 @@ if (Math.random() > 0.5) {
 }
 ```
 
+## 合併型のプロパティ
+
 合併型に含まれるすべての型に存在するメンバープロパティへのアクセスだけを許可します。
 
 ```typescript
 let physicist = Math.random() > 0.5 ? "Marie Curie" : 84;
 physicist.toString(); // Ok
 physicist.toUpperCase(); // error
+```
+
+## リテラル型
+
+プリミティブ型の何らかの値としてではなく、プリミティブ型の特定の値として理解される型。
+
+```typescript
+const philosopher = "Hypatia";
 ```
 
 合併型のアノテーションは、リテラルとプリミティブ型を組み合わせて書くこともできます
@@ -24,6 +35,8 @@ lifespan = 89; // Ok
 lifespan = "ongoing"; // Ok
 lifespan = true; // error
 ```
+
+## 3.4.2 真値性による絞り込み
 
 JavaScriptにおいて **真値性(truthiness)** 、すなわち **真値(truthy)** であることは、ある値が&&演算子やif文など、Booleanのコンテキストで評価される場合に、真(true)と見なされるかどうかである。
 JavaScriptの値は、 **偽値(falsy)**  -- false, 0, -0, 0n, "", null, undefined, NaN -- と定義されたものを除いて全て真値です。

@@ -1,5 +1,5 @@
-# Debian 12.1
-FROM node:20.8-bookworm
+# Debian 12
+FROM node:22.2.0-bookworm
 
 # Default UID and GID on MacOS
 ARG user_id=501

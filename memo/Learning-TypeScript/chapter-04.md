@@ -284,3 +284,5 @@ type WrittenArt = Artwork & Writing;
 ```typescript
 type NotPossible = string & number; // never
 ```
+
+neverというキーワードと型は、プログラミング言語において **ボトム型(bottom type)** 、すなわち「空の型」と呼ばれるものです。ボトム型には取り得る値がなく、到達し得ない型であり、どんな型も割り当てることができません。

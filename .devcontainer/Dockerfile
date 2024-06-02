@@ -1,5 +1,5 @@
-# Debian 12.1
-FROM node:20.8-bookworm
+# Debian 12
+FROM node:22.2.0-bookworm
 
 # Default UID and GID on MacOS
 ARG user_id=501
@@ -10,37 +10,48 @@ ARG user_name=developer
 # You can only use environment variables explicitly set in the Dockerfile.
 # https://docs.docker.com/engine/reference/builder/#/workdir
 ARG home=/home/${user_name}
-# ARG ruby_version=3.1.4
 
-RUN apt-get update && \
-  apt-get upgrade -y && \
-  apt-get install -y --no-install-recommends \
-    # Basic
-    less \
-    sudo \
-    procps \
-    zsh \
-    sed \
-    curl \
+RUN apt-get update -qq && \
+  apt-get upgrade -y -qq && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends \
     ca-certificates \
+    git
+
+#
+# Add user.
+#
+#   Someone uses devcontainer, but the others don't.
+#   That is why dockerfile calls `features` MANUALLY here without devcontainer.json.
+#
+RUN cd /usr/src && \
+  git clone --depth 1 https://github.com/devcontainers/features.git && \
+  USERNAME=${user_name} \
+  UID=${user_id} \
+  GID=${group_id} \
+  CONFIGUREZSHASDEFAULTSHELL=true \
+    /usr/src/features/src/common-utils/install.sh
+
+#
+# Install packages
+#
+RUN apt-get update -qq && \
+  apt-get upgrade -y -qq && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends \
+    # Basic
     iputils-ping \
-    net-tools \
-    git \
-    gnupg2 \
     # Editor
-    vim \
-    emacs
-RUN apt-get install -y --no-install-recommends \
-  tmux \
-  # fzf needs PAGER(less or something)
-  fzf \
-  exa \
-  trash-cli
+    vim emacs \
+    # Utility
+    tmux \
+    # fzf needs PAGER(less or something)
+    fzf \
+    exa \
+    trash-cli && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/*
 
-COPY bin/* /usr/local/bin/
-RUN /usr/local/bin/set-superuser-and-group.sh ${group_id} ${user_id} ${user_name}
-
-RUN chown -R ${user_id}:${group_id} ${home}
+COPY bin/docker-entrypoint.sh /usr/local/bin/
+COPY zshrc-entrypoint-init.d /etc/zshrc-entrypoint-init.d
 
 #
 # TypeScript

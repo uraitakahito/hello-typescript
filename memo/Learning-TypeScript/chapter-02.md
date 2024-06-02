@@ -1,9 +1,13 @@
+## 2.2 割り当て可能性
+
 ある値を関数呼び出しや変数に与えられるかどうかというTypeScriptのチェックは、 **割り当て可能性(assignability)** と呼ばれます
 
 ```typescript
 let lastName = "King";
 lastName = true; // error
 ```
+
+## 2.3 型アノテーション
 
 初期化時に型が推論されない変数は進化する **any(evolving any)** とみなす
 
@@ -22,6 +26,20 @@ rocker.toUpperCase(); // error
 let hoge: string;
 hoge = "Joan Jett";
 ```
+
+## 2.4 型の形状
+
+次のスニペットでは、TypeScriptはcherオブジェクトがmiddleNameというキーを持ってないことを知っているため、エラーを出します。
+
+```typescript
+let cher: {
+  firstName: "Cherilyn",
+  lastName: "Sarkisian",
+};
+cher.middleName; // error
+```
+
+### 2.4.1 モジュール
 
 ECMAScript 2015の「ECMAScript modules」でファイル間のimportとexportが標準化されました。
 

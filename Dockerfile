@@ -4,10 +4,6 @@ FROM node:22.2.0-bookworm
 ARG user_name=developer
 ARG user_id
 ARG group_id
-# The WORKDIR instruction can resolve environment variables previously set using ENV.
-# You can only use environment variables explicitly set in the Dockerfile.
-# https://docs.docker.com/engine/reference/builder/#/workdir
-ARG home=/home/${user_name}
 
 RUN apt-get update -qq && \
   apt-get upgrade -y -qq && \

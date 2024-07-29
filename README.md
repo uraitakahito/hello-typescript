@@ -15,3 +15,7 @@ https://www.typescriptlang.org/ja/play/
 ```console
 % yo
 ```
+
+```console
+% npx vitest run test/prime.test.ts
+```

@@ -11,6 +11,25 @@
       "program": "${workspaceFolder}/src/index.ts",
       "preLaunchTask": "tsc: build - tsconfig.json",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug CURRENT TypeScript",
+      "preLaunchTask": "Compile TypeScript",
+      "cwd": "${workspaceFolder}",
+      "program": "${file}"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug CURRENT Test File",
+      "autoAttachChildProcesses": true,
+      "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+      "program": "${workspaceRoot}/node_modules/vitest/vitest.mjs",
+      "args": ["run", "${relativeFile}"],
+      "smartStep": true,
+      "console": "integratedTerminal"
     }
   ]
 }

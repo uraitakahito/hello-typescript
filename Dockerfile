@@ -6,12 +6,15 @@ ARG user_id
 ARG group_id
 ARG dotfiles_repository="https://github.com/uraitakahito/dotfiles.git"
 
+# Avoid warnings by switching to noninteractive for the build process
+ENV DEBIAN_FRONTEND=noninteractive
+
 #
 # Install packages
 #
 RUN apt-get update -qq && \
   apt-get upgrade -y -qq && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends \
+  apt-get install -y -qq --no-install-recommends \
     # Basic
     ca-certificates \
     git \
@@ -32,7 +35,7 @@ RUN apt-get update -qq && \
 #
 RUN apt-get update -qq && \
   apt-get upgrade -y -qq && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends \
+  apt-get install -y -qq --no-install-recommends \
     gpg \
     wget && \
   apt-get clean && \

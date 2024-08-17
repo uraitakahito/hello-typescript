@@ -72,6 +72,8 @@ RUN npm install -g ${NODE_MODULES} && \
 RUN npm install -g yo generator-code && \
   npm cache clean --force > /dev/null 2>&1
 
+RUN git config --system --add safe.directory /app
+
 #
 # Add user and install basic tools.
 #

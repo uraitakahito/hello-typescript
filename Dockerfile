@@ -83,6 +83,7 @@ RUN cd /usr/src && \
   USERUID=${user_id} \
   USERGID=${group_id} \
   CONFIGUREZSHASDEFAULTSHELL=true \
+  UPGRADEPACKAGES=false \
     /usr/src/features/src/common-utils/install.sh
 USER ${user_name}
 WORKDIR /home/${user_name}

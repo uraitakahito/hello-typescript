@@ -13,7 +13,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install packages
 #
 RUN apt-get update -qq && \
-  apt-get upgrade -y -qq && \
   apt-get install -y -qq --no-install-recommends \
     # Basic
     ca-certificates \
@@ -34,7 +33,6 @@ RUN apt-get update -qq && \
 # https://github.com/eza-community/eza/blob/main/INSTALL.md
 #
 RUN apt-get update -qq && \
-  apt-get upgrade -y -qq && \
   apt-get install -y -qq --no-install-recommends \
     gpg \
     wget && \

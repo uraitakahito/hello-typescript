@@ -1,6 +1,17 @@
-## Playground
+Build your docker image:
 
-https://www.typescriptlang.org/ja/play/
+```sh
+PROJECT=$(basename `pwd`)
+```
+```sh
+docker image build -t $PROJECT-image . --build-arg user_id=`id -u` --build-arg group_id=`id -g`
+```
+
+And run it:
+
+```sh
+docker container run -it --rm --init -e NODE_ENV=development --mount type=bind,src=`pwd`,dst=/app --name $PROJECT-container $PROJECT-image /bin/zsh
+```
 
 ## localで実行するとき
 

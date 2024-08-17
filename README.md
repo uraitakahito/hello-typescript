@@ -24,9 +24,5 @@ docker container run -it --rm --init -e NODE_ENV=development --mount type=bind,s
 ```
 
 ```console
-% yo
-```
-
-```console
 % npx vitest run test/prime.test.ts
 ```

@@ -48,7 +48,15 @@ RUN apt-get update -qq && \
   rm -rf /var/lib/apt/lists/*
 
 COPY docker-entrypoint.sh /usr/local/bin/
-COPY zshrc-entrypoint-init.d /etc/zshrc-entrypoint-init.d
+
+#
+# Visual Studio Code extensions
+# https://github.com/uraitakahito/dotfiles/blob/53cdb7b04f68a73c27d927fcd8a128f538056eba/zsh/myzshrc#L26-L36
+#
+RUN cd /usr/src && \
+  git clone --depth 1 https://github.com/uraitakahito/zshrc-entrypoint-init.d && \
+  mkdir /etc/zshrc-entrypoint-init.d && \
+  ln -s /usr/src/zshrc-entrypoint-init.d/install-vscode-javascript-extensions.sh /etc/zshrc-entrypoint-init.d/install-vscode-javascript-extensions.sh
 
 #
 # TypeScript

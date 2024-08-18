@@ -12,18 +12,18 @@ docker container run -it --rm --init -e NODE_ENV=development --mount type=bind,s
 
 ## localで実行するとき
 
-```console
-% npx ts-node src/index.ts
+```
+npx ts-node src/index.ts
 ```
 
-```console
-% tsc --project tsconfig.json
+```sh
+tsc --project tsconfig.json
 ```
 
 You can pass an additional argument as the [filter](https://vitest.dev/guide/cli.html#vitest) of the test files to run. For example:
 
-```console
-% npx vitest run concurrent
+```sh
+npx vitest run concurrent
 ```
 
 Will run only the test file that contains *concurrent* in their paths. 

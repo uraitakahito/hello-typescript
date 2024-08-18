@@ -7,7 +7,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "run selected TypeScript",
+      "name": "Run selected TypeScript file",
       // program - an absolute path to the Node.js program to debug.
       "program": "${file}",
       "preLaunchTask": "Compile TypeScript",
@@ -16,10 +16,11 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Run selected TypeScript file",
+      "name": "Test selected TypeScript file",
+      // program - an absolute path to the Node.js program to debug.
+      "program": "${workspaceRoot}/node_modules/vitest/vitest.mjs",
       "autoAttachChildProcesses": true,
       "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
-      "program": "${workspaceRoot}/node_modules/vitest/vitest.mjs",
       "args": ["run", "${relativeFile}"],
       "smartStep": true,
       "console": "integratedTerminal"

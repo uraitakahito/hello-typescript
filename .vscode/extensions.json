@@ -1,9 +1,9 @@
 {
   "recommendations": [
+    "dbaeumer.vscode-eslint",
     "eamodio.gitlens",
     "GitHub.copilot",
     "ms-azuretools.vscode-docker",
-    "ms-vscode.vscode-typescript-tslint-plugin",
     "oderwat.indent-rainbow",
   ]
 }

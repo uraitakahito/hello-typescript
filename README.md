@@ -20,9 +20,13 @@ docker container run -it --rm --init -e NODE_ENV=development --mount type=bind,s
 % tsc --project tsconfig.json
 ```
 
+You can pass an additional argument as the [filter](https://vitest.dev/guide/cli.html#vitest) of the test files to run. For example:
+
 ```console
-% npx vitest run test/prime.test.ts
+% npx vitest run concurrent
 ```
+
+Will run only the test file that contains *concurrent* in their paths. 
 
 ```sh
 npx eslint .

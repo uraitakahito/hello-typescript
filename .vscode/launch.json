@@ -16,15 +16,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Debug CURRENT TypeScript",
-      "preLaunchTask": "Compile TypeScript",
-      "cwd": "${workspaceFolder}",
-      "program": "${file}"
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Debug CURRENT Test File",
+      "name": "Run selected TypeScript file",
       "autoAttachChildProcesses": true,
       "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
       "program": "${workspaceRoot}/node_modules/vitest/vitest.mjs",

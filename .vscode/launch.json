@@ -7,9 +7,10 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "launch",
-      "program": "${workspaceFolder}/src/index.ts",
-      "preLaunchTask": "tsc: build - tsconfig.json",
+      "name": "run selected TypeScript",
+      // program - an absolute path to the Node.js program to debug.
+      "program": "${file}",
+      "preLaunchTask": "Compile TypeScript",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     },
     {

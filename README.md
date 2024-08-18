@@ -23,3 +23,7 @@ docker container run -it --rm --init -e NODE_ENV=development --mount type=bind,s
 ```console
 % npx vitest run test/prime.test.ts
 ```
+
+```sh
+npx eslint .
+```

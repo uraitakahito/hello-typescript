@@ -48,7 +48,6 @@ RUN cd /usr/src && \
     /usr/src/extra-utils/install.sh
 
 USER ${user_name}
-WORKDIR /home/${user_name}
 
 #
 # dotfiles

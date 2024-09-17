@@ -10,7 +10,7 @@ And run it:
 docker container run -it --rm --init -e NODE_ENV=development --mount type=bind,src=`pwd`,dst=/app --name $PROJECT-container $PROJECT-image /bin/zsh
 ```
 
-## localで実行するとき
+Run the following commands inside the Docker containers:
 
 ```
 npx ts-node src/index.ts

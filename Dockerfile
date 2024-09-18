@@ -1,5 +1,5 @@
 # Debian 12
-FROM node:22.8.0-bookworm
+FROM node:22.9.0-bookworm
 
 ARG user_name=developer
 ARG user_id

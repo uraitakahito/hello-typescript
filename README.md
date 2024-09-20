@@ -17,7 +17,7 @@ npx ts-node src/fizzbuzz.ts
 ```
 
 ```sh
-tsc --project tsconfig.json
+npx tsc --project tsconfig.json
 ```
 
 You can pass an additional argument as the [filter](https://vitest.dev/guide/cli.html#vitest) of the test files to run. For example:

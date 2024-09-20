@@ -13,7 +13,7 @@ docker container run -it --rm --init -e NODE_ENV=development --mount type=bind,s
 Run the following commands inside the Docker containers:
 
 ```
-npx ts-node src/index.ts
+npx ts-node src/fizzbuzz.ts
 ```
 
 ```sh

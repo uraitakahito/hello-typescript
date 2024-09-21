@@ -13,11 +13,11 @@ docker container run -it --rm --init -e NODE_ENV=development --mount type=bind,s
 Run the following commands inside the Docker containers:
 
 ```
-npx ts-node src/index.ts
+npx tsx src/fizzbuzz.ts
 ```
 
 ```sh
-tsc --project tsconfig.json
+npx tsc --project tsconfig.json
 ```
 
 You can pass an additional argument as the [filter](https://vitest.dev/guide/cli.html#vitest) of the test files to run. For example:

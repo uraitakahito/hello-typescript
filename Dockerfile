@@ -11,22 +11,6 @@ ARG extra_utils_repository="https://github.com/uraitakahito/extra-utils.git"
 COPY docker-entrypoint.sh /usr/local/bin/
 
 #
-# TypeScript
-#
-ARG NODE_MODULES="eslint tslint-to-eslint-config typescript ts-node"
-RUN npm install -g ${NODE_MODULES} && \
-  npm cache clean --force > /dev/null 2>&1
-
-#
-# Develop Visual Studio Code extension
-# https://code.visualstudio.com/api/get-started/your-first-extension
-#
-RUN npm install -g yo generator-code && \
-  npm cache clean --force > /dev/null 2>&1
-
-RUN git config --system --add safe.directory /app
-
-#
 # Add user and install common utils.
 #
 RUN cd /usr/src && \

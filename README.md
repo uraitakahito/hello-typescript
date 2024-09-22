@@ -12,7 +12,7 @@ docker container run -it --rm --init -e NODE_ENV=development --mount type=bind,s
 
 Run the following commands inside the Docker containers:
 
-```
+```sh
 npx tsx src/fizzbuzz.ts
 ```
 

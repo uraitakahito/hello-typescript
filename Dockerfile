@@ -9,8 +9,6 @@ ARG features_repository="https://github.com/uraitakahito/features.git"
 ARG extra_utils_repository="https://github.com/uraitakahito/extra-utils.git"
 ARG node_version="22.9.0"
 
-COPY docker-entrypoint.sh /usr/local/bin/
-
 #
 # Git
 #
@@ -56,6 +54,8 @@ RUN INSTALLYARNUSINGAPT=false \
     USERNAME=${user_name} \
     VERSION=${node_version} \
       /usr/src/features/src/node/install.sh
+
+COPY docker-entrypoint.sh /usr/local/bin/
 
 USER ${user_name}
 

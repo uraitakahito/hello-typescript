@@ -2,7 +2,6 @@
   "name": "hello-typescript",
   "version": "1.0.0",
   "description": "Type:",
-  "main": "index.js",
   "scripts": {
     "test": "vitest",
     "coverage": "vitest run --coverage"

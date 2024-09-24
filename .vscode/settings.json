@@ -13,5 +13,10 @@
   // Prettier
   //
   "editor.formatOnPaste": false,
-  "editor.formatOnSave": false
+  "editor.formatOnSave": false,
+
+  // https://code.visualstudio.com/docs/typescript/typescript-editing
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.suggest.autoImports": true
 }

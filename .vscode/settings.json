@@ -4,6 +4,11 @@
 //   macOS $HOME/Library/Application\ Support/Code/User/settings.json
 //   Linux $HOME/.config/Code/User/settings.json
 {
+  // To actually start using the workspace version for IntelliSense,
+  // you **MUST RUN** the TypeScript: Select TypeScript Version command
+  // and select the workspace version.
+  // https://code.visualstudio.com/docs/typescript/typescript-compiling#_using-newer-typescript-versions
+  "typescript.tsdk": "./node_modules/typescript/lib",
   //
   // Prettier
   //

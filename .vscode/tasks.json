@@ -5,6 +5,8 @@
       "label": "Compile TypeScript",
       "type": "typescript",
       "tsconfig": "tsconfig.json",
+      // The VS Code task system can also detect build issues through a problem matcher.
+      // https://code.visualstudio.com/docs/editor/tasks#_defining-a-problem-matcher
       "problemMatcher": ["$tsc"],
       "group": {
         "kind": "build",

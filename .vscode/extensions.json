@@ -17,12 +17,12 @@
     //
     // Others
     //
-    // https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
-    "eamodio.gitlens",
     // https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
     "esbenp.prettier-vscode",
     // https://marketplace.visualstudio.com/items?itemName=GitHub.copilot
     "GitHub.copilot",
+    // https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github
+    "GitHub.vscode-pull-request-github",
     // https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions
     "GitHub.vscode-github-actions",
     // https://marketplace.visualstudio.com/items?itemName=jasonnutter.vscode-codeowners

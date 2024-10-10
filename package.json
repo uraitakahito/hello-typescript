@@ -2,6 +2,7 @@
   "name": "hello-typescript",
   "version": "1.0.0",
   "description": "Type:",
+  "type": "module",
   "scripts": {
     "clean": "npm run rmdir dist",
     "test": "vitest",
@@ -19,6 +20,7 @@
     "@vitest/coverage-v8": "^2.0.5",
     "date-fns": "^4.1.0",
     "eslint": "^9.9.0",
+    "fs-extra": "^11.2.0",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.1.0",
     "vitest": "*"

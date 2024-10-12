@@ -1,9 +1,9 @@
-import * as fs from 'fs-extra'
+import fse from 'fs-extra/esm';
 
 // Sync:
 try {
-  fs.copySync('tmp/myfile', 'tmp/mynewfile')
-  console.log('success!')
+    fse.copySync('tmp/myfile', 'tmp/mynewfile');
+    console.log('success!');
 } catch (err) {
-  console.error(err)
+    console.error(err);
 }

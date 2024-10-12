@@ -24,6 +24,7 @@ npx vitest run concurrent
 
 Will run only the test file that contains *concurrent* in their paths. 
 
-```sh
-npx eslint .
+```console
+% npx eslint .
+% npm run format
 ```

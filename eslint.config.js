@@ -10,6 +10,9 @@ export default tseslint.config(
     ignores: [
       "eslint.config.js",
       ".Trash-*/**/*"
-    ]
+    ],
+    "rules": {
+      "@typescript-eslint/no-explicit-any": ["off"]
+    },
   }
 );

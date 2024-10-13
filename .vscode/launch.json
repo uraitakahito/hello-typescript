@@ -5,9 +5,9 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Run selected TypeScript file",
       "type": "node",
       "request": "launch",
-      "name": "Run selected TypeScript file",
       // program - an absolute path to the Node.js program to debug.
       "program": "${file}",
       "preLaunchTask": "Compile TypeScript",
@@ -23,9 +23,9 @@
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     },
     {
+      "name": "Test selected Vitest",
       "type": "node",
       "request": "launch",
-      "name": "Test selected TypeScript file",
       // program - an absolute path to the Node.js program to debug.
       "program": "${workspaceRoot}/node_modules/vitest/vitest.mjs",
       "autoAttachChildProcesses": true,
@@ -33,6 +33,29 @@
       "args": ["run", "${relativeFile}"],
       "smartStep": true,
       "console": "integratedTerminal"
+    },
+    {
+      "name": "Test selected Jest",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "${workspaceRoot}/node_modules/jest/bin/jest.js",
+        "--runInBand",
+        "${relativeFile}"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "Test All Jest",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "${workspaceRoot}/node_modules/jest/bin/jest.js",
+        "--runInBand"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }

@@ -10,7 +10,6 @@
       "request": "launch",
       // program - an absolute path to the Node.js program to debug.
       "program": "${file}",
-      "preLaunchTask": "Compile TypeScript",
       //
       // Mapping the output location
       //
@@ -20,7 +19,8 @@
       // Whenever you set a breakpoint in the original source, VS Code tries to find
       // the generated source by searching the files specified by glob patterns in `outFiles`.
       // https://code.visualstudio.com/docs/typescript/typescript-debugging
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "preLaunchTask": "${defaultBuildTask}",
     },
     {
       "name": "Test selected Vitest",

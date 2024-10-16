@@ -1,15 +1,5 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} **/
 export default {
-    // testEnvironment: "node",
-    // transform: {
-    //   "^.+.tsx?$": ["ts-jest",{}],
-    // },
-
-    // coverageProvider: "v8",
-    // roots: [
-    //   "<rootDir>/src/", "<rootDir>/test-jest/"
-    // ],
-
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 

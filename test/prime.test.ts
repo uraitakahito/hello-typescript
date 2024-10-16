@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { primenumber } from '../src/prime';
 
 describe('primenumber', () => {

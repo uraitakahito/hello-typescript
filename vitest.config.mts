@@ -5,6 +5,6 @@ import { defineConfig } from 'vite';
 export default defineConfig({
     test: {
         globals: true,
-        include: ['test/**/*.{test,spec}.?(c|m)[jt]s?(x)'],
+        include: ['{test,test-vitest}/**/*.{test,spec}.?(c|m)[jt]s?(x)'],
     },
 });

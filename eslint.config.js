@@ -3,6 +3,7 @@
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
+import vitest from "eslint-plugin-vitest";
 
 const testJestConfig = {
     files: ['{test,test-jest}/**/*.test.{ts,tsx}'],
@@ -11,6 +12,21 @@ const testJestConfig = {
             ...globals.jest,
         },
     },
+};
+
+const testVitestConfig = {
+  files: ["{test,test-vitest}/**/*.test.{ts,tsx}"],
+  languageOptions: {
+    globals: {
+      ...vitest.environments.env.globals,
+    },
+  },
+  plugins: {
+    vitest: vitest,
+  },
+  rules: {
+    ...vitest.configs.recommended.rules, // you can also use vitest.configs.all.rules to enable all rules
+  },
 };
 
 export default [
@@ -33,4 +49,5 @@ export default [
         ignores: ['.Trash*', 'dist', 'node_modules', '*.js'],
     },
     testJestConfig,
+    testVitestConfig
 ];

@@ -1,5 +1,5 @@
 // https://pc.atsuhiro-me.net/entry/2022/02/28/163920
-import * as assert from 'assert';
+import * as assert from 'node:assert';
 
 const sleep = (t: number) => new Promise((resolve) => setTimeout(resolve, t));
 

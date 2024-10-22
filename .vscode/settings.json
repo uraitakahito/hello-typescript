@@ -9,11 +9,6 @@
   // and select the workspace version.
   // https://code.visualstudio.com/docs/typescript/typescript-compiling#_using-newer-typescript-versions
   "typescript.tsdk": "./node_modules/typescript/lib",
-  //
-  // Prettier
-  //
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
 
   // https://code.visualstudio.com/docs/typescript/typescript-editing
   "typescript.implementationsCodeLens.enabled": true,

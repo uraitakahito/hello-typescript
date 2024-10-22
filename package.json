@@ -13,8 +13,9 @@
     "build": "npm run clean && tsc",
     "build:tsc": "tsc",
     "build:tsup": "tsup",
-    "format": "biome format --write .",
-    "format:check": "biome format ."
+    "lint": "biome lint",
+    "format": "biome format --write",
+    "check": "biome check --write"
   },
   "author": "",
   "license": "ISC",

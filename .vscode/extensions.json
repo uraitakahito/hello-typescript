@@ -19,8 +19,6 @@
     //
     // https://marketplace.visualstudio.com/items?itemName=biomejs.biome
     "biomejs.biome",
-    // https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
-    "esbenp.prettier-vscode",
     // https://marketplace.visualstudio.com/items?itemName=GitHub.copilot
     "GitHub.copilot",
     // https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github

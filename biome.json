@@ -16,6 +16,6 @@
 		}
 	},
 	"linter": {
-		"enabled": false
+		"enabled": true
 	}
 }

@@ -14,8 +14,8 @@
     "build:tsc": "tsc",
     "build:tsup": "tsup",
     "lint": "biome lint",
-    "format": "biome format --write .",
-    "format:check": "biome format ."
+    "format": "biome format --write",
+    "check": "biome check --write"
   },
   "author": "",
   "license": "ISC",

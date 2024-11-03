@@ -1,34 +1,41 @@
 {
-  // https://biomejs.dev/reference/configuration/#schema
-  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  // https://biomejs.dev/guides/integrate-in-vcs/
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
-  "files": {
-    "ignore": [".vscode/**", "package.json"]
-  },
+	// https://biomejs.dev/reference/configuration/#schema
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	// https://biomejs.dev/guides/integrate-in-vcs/
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"files": {
+		"ignore": [".vscode/**", "package.json"]
+	},
 	"formatter": {
-    "enabled": true,
+		"enabled": true,
 		"formatWithErrors": true
 	},
 	"linter": {
 		"enabled": true,
-    "rules": {
-      "recommended": true
-    }
+		"rules": {
+			"recommended": true
+		}
 	},
+	// https://biomejs.dev/reference/configuration/#javascript
 	"javascript": {
+		// TypeScript Style Guide
+		// https://basarat.gitbook.io/typescript/styleguide
+		// https://google.github.io/styleguide/tsguide.html
 		"formatter": {
+			// https://basarat.gitbook.io/typescript/styleguide#quotes
 			"quoteStyle": "single",
-			"semicolons": "always",
-			"trailingCommas": "all",
-			"lineWidth": 120,
+			// https://basarat.gitbook.io/typescript/styleguide#spaces
 			"indentStyle": "space",
-			"indentWidth": 4,
-			"quoteProperties": "preserve",
+			"indentWidth": 2,
+			// https://basarat.gitbook.io/typescript/styleguide#semicolons
+			"semicolons": "always",
+
+			"trailingCommas": "all",
+			"lineWidth": 100,
 			"lineEnding": "lf"
 		}
 	}

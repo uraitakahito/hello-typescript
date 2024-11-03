@@ -24,5 +24,8 @@
   // https://github.com/jest-community/vscode-jest/issues/666#issuecomment-971909596
   "jest.nodeEnv": {
     "NODE_OPTIONS": "--experimental-vm-modules"
-  }
+  },
+
+  // https://biomejs.dev/reference/vscode/#default-formatter
+  "editor.defaultFormatter": "biomejs.biome"
 }

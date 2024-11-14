@@ -12,15 +12,11 @@
     "rmdir": "node -e \"var fs = require('fs'); try{process.argv.slice(1).map((fpath) => fs.rmdirSync(fpath, { recursive: true }))}catch(err){console.log(err)}; process.exit(0);\"",
     "build": "npm run clean && tsc",
     "build:tsc": "tsc",
-    "build:tsup": "tsup",
-    "lint": "biome lint",
-    "format": "biome format --write",
-    "check": "biome check --write"
+    "build:tsup": "tsup"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@biomejs/biome": "^1.9.3",
     "@html-eslint/eslint-plugin": "^0.27.0",
     "@html-eslint/parser": "^0.27.0",
     "@types/fs-extra": "^11.0.4",

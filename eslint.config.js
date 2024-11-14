@@ -1,5 +1,8 @@
-export default [
+import tseslint from "typescript-eslint";
+
+export default tseslint.config(
   {
-    ignores: ["coverage"],
+    ignores: [".Trash*", "coverage", "dist"],
   },
-];
+  ...tseslint.configs.recommended
+);

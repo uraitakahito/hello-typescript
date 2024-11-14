@@ -17,6 +17,8 @@
     //
     // https://marketplace.visualstudio.com/items?itemName=anteprimorac.html-end-tag-labels
     "anteprimorac.html-end-tag-labels",
+    // https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+    "esbenp.prettier-vscode",
     // https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
     "formulahendry.auto-rename-tag",
     //

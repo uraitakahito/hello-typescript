@@ -15,13 +15,15 @@
     //
     // HTML
     //
+    // https://marketplace.visualstudio.com/items?itemName=anteprimorac.html-end-tag-labels
+    "anteprimorac.html-end-tag-labels",
+    // https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+    "esbenp.prettier-vscode",
     // https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
     "formulahendry.auto-rename-tag",
     //
     // Others
     //
-    // https://marketplace.visualstudio.com/items?itemName=biomejs.biome
-    "biomejs.biome",
     // https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
     "dbaeumer.vscode-eslint",
     // https://marketplace.visualstudio.com/items?itemName=dbankier.vscode-quick-select

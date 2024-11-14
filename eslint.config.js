@@ -1,10 +1,16 @@
-import html from '@html-eslint/eslint-plugin';
-export default [
-    // your own configurations.
-    {
-        // recommended configuration included in the plugin
-        ...html.configs['flat/recommended'],
-        files: ['**/*.html'],
-        ignores: ['coverage/**/*'],
+import tseslint from "typescript-eslint";
+
+export default tseslint.config(
+  {
+    ignores: [".Trash*", "coverage", "dist"],
+  },
+  ...tseslint.configs.recommended,
+
+  // https://typescript-eslint.io/rules/naming-convention/
+  {
+    ignores: ["eslint.config.js", "jest.config.js"],
+    rules: {
+      "@typescript-eslint/naming-convention": "error",
     },
-];
+  }
+);

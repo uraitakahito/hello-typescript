@@ -1,10 +1,10 @@
-// config-airbnb is not yet officially compatible with flat config
+// > Use eslint v8 until such time as our configs support v9.
 // https://github.com/airbnb/javascript/issues/2961
 // Backwards compatibility utility is available
 // https://eslint.org/blog/2022/08/new-config-system-part-2/#backwards-compatibility-utility
 
 /**
- * 命名規則
+ * Naming conventions
  */
 const commonWarnNamingRules = [
   // https://google.github.io/styleguide/tsguide.html#naming-rules-by-identifier-type

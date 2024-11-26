@@ -10,6 +10,16 @@
   // https://code.visualstudio.com/docs/editor/codebasics#_how-do-i-turn-on-word-wrap
   "editor.wordWrap": "on",
 
+  //
+  // JSON/JSONC
+  //
+  "[json]": {
+    "editor.formatOnSave": false
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": false
+  },
+
   // To actually start using the workspace version for IntelliSense,
   // you **MUST RUN** the TypeScript: Select TypeScript Version command
   // and select the workspace version.

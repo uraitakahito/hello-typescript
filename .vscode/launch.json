@@ -19,7 +19,9 @@
       // Whenever you set a breakpoint in the original source, VS Code tries to find
       // the generated source by searching the files specified by glob patterns in `outFiles`.
       // https://code.visualstudio.com/docs/typescript/typescript-debugging
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      // If VS Code can't find the generated source, you may see a message like:
+      //   Uncaught TypeError TypeError [ERR_UNKNOWN_FILE_EXTENSION]: Unknown file extension ".ts"
+      "outFiles": ["${workspaceFolder}/dist/**/*.{js,mjs,cjs}"],
       "preLaunchTask": "${defaultBuildTask}",
     },
     {

@@ -78,13 +78,22 @@ module.exports = {
   },
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   extends: [
-    // airbnb includes React
+    //
+    // This package provides Airbnb's .eslintrc as an extensible shared config.
+    //
+    // If you don't need React support:
     // https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/index.js
-    // airbnb-base does not include React
-    // https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/index.js
     "airbnb-base",
+    // If you need React support:
+    // https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/index.js
     // 'airbnb',
+
+    //
+    // Enhances Airbnb's ESLint config with TypeScript support
+    //
+    // If you don't need React support:
     "airbnb-typescript/base",
+    // If you need React support:
     // 'airbnb-typescript',
   ],
   overrides: [

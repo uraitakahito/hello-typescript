@@ -91,6 +91,8 @@ module.exports = {
     {
       files: ['vitest.config.?(c|m)[jt]s'],
       rules: {
+        // https://typescript-eslint.io/rules/naming-convention/
+        '@typescript-eslint/naming-convention': 'off',
         // https://github.com/import-js/eslint-plugin-import/blob/v2.31.0/docs/rules/no-extraneous-dependencies.md
         'import/no-extraneous-dependencies': 'off',
       },

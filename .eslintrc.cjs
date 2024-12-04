@@ -82,10 +82,10 @@ module.exports = {
     // https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/index.js
     // airbnb-base does not include React
     // https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/index.js
-    // "airbnb-base",
-    'airbnb',
-    // "airbnb-typescript/base",
-    'airbnb-typescript',
+    "airbnb-base",
+    // 'airbnb',
+    "airbnb-typescript/base",
+    // 'airbnb-typescript',
   ],
   overrides: [
     {

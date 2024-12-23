@@ -1,7 +1,15 @@
-// > Use eslint v8 until such time as our configs support v9.
-// https://github.com/airbnb/javascript/issues/2961
-// Backwards compatibility utility is available
-// https://eslint.org/blog/2022/08/new-config-system-part-2/#backwards-compatibility-utility
+//
+// eslint-config-airbnb*
+//
+// > Use eslint v8 until such time as our configs support v9:
+//   https://github.com/airbnb/javascript/issues/2961
+//
+// Backwards compatibility utility is available:
+//   https://eslint.org/blog/2022/08/new-config-system-part-2/#backwards-compatibility-utility
+//
+// peerDependencies:
+//   https://github.com/airbnb/javascript/blob/11f986fdc7d6b4c80e396437e9c45c939362bdee/packages/eslint-config-airbnb-base/package.json#L82-L85
+//
 
 /**
  * Naming conventions

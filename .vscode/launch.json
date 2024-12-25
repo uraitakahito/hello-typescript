@@ -27,18 +27,6 @@
       "preLaunchTask": "${defaultBuildTask}",
     },
     {
-      "name": "Test selected Vitest",
-      "type": "node",
-      "request": "launch",
-      // program - an absolute path to the Node.js program to debug.
-      "program": "${workspaceRoot}/node_modules/vitest/vitest.mjs",
-      "autoAttachChildProcesses": true,
-      "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
-      "args": ["run", "${relativeFile}"],
-      "smartStep": true,
-      "console": "integratedTerminal"
-    },
-    {
       "name": "Test selected Jest",
       "type": "node",
       "request": "launch",

@@ -5,8 +5,6 @@
     //
     // https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest
     "Orta.vscode-jest",
-    // https://marketplace.visualstudio.com/items?itemName=vitest.explorer
-    "vitest.explorer",
     //
     // TypeScript
     //

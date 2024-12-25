@@ -22,6 +22,18 @@ const commonWarnNamingRules = [
   },
 
   //
+  // Enforce that boolean variables are prefixed with an allowed verb
+  // https://typescript-eslint.io/rules/naming-convention/#enforce-that-boolean-variables-are-prefixed-with-an-allowed-verb
+  // https://github.com/airbnb/javascript?tab=readme-ov-file#accessors--boolean-prefix
+  //
+  {
+    selector: ['variable'],
+    types: ['boolean'],
+    format: ['camelCase'],
+    prefix: ['can', 'did', 'has', 'is', 'must', 'need', 'should', 'will'],
+  },
+
+  //
   // Only symbols declared on the module level, static fields of module level classes, and values of module level enums, may use CONST_CASE.
   // https://google.github.io/styleguide/tsguide.html#identifiers-constants
   //
@@ -60,17 +72,6 @@ const commonWarnNamingRules = [
   {
     selector: 'typeParameter',
     format: ['PascalCase'],
-  },
-
-  //
-  // Enforce that boolean variables are prefixed with an allowed verb
-  // https://typescript-eslint.io/rules/naming-convention/#enforce-that-boolean-variables-are-prefixed-with-an-allowed-verb
-  //
-  {
-    selector: ['variable', 'function', 'parameter'],
-    types: ['boolean'],
-    format: ['PascalCase'],
-    prefix: ['can', 'did', 'has', 'is', 'must', 'need', 'should', 'will'],
   },
 ];
 

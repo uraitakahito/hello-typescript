@@ -1,11 +1,6 @@
 {
   "recommendations": [
     //
-    // JavaScript
-    //
-    // https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest
-    "Orta.vscode-jest",
-    //
     // TypeScript
     //
     // https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors

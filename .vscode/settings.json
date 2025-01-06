@@ -14,10 +14,16 @@
   // JSON/JSONC
   //
   "[json]": {
-    "editor.formatOnSave": false
+    "editor.detectIndentation": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false
   },
   "[jsonc]": {
-    "editor.formatOnSave": false
+    "editor.detectIndentation": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false
   },
 
   // To actually start using the workspace version for IntelliSense,

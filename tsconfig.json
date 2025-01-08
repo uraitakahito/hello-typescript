@@ -33,8 +33,16 @@
 		// "useDefineForClassFields": true,                  /* Emit ECMAScript-standard-compliant class fields. */
 		// "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
 
-		/* Modules */
-		"module": "ES2022"                                   /* Specify what module code is generated. */,
+		//
+		// Modules
+		//
+
+		//
+		// Specify what module code is generated.
+		// https://speakerdeck.com/uhyo/tsconfig-dot-jsonnoshe-ding-wojian-zhi-sou-hurontoendoxiang-ke-2024xia?slide=27
+		//
+		"module": "ESNext",
+
 		// "rootDir": "./",                                  /* Specify the root folder within your source files. */
 
 		//

@@ -43,7 +43,12 @@
 		//
 		"moduleResolution": "Bundler",
 
-		// "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
+		//
+		// Specify the base directory to resolve non-relative module names. DO NOT USE THIS!
+		// https://speakerdeck.com/uhyo/tsconfig-dot-jsonnoshe-ding-wojian-zhi-sou-hurontoendoxiang-ke-2024xia?slide=13
+		//
+		// "baseUrl": "./",
+
 		// "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
 		// "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
 		// "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */

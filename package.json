@@ -6,7 +6,6 @@
   "scripts": {
     "clean": "npm run rmdir dist",
     "lint": "eslint .",
-    "test": "jest",
     "rmdir": "node -e \"var fs = require('fs'); try{process.argv.slice(1).map((fpath) => fs.rmdirSync(fpath, { recursive: true }))}catch(err){console.log(err)}; process.exit(0);\"",
     "build": "tsc -b -v --listFiles",
     "build:tsc": "tsc",
@@ -32,6 +31,7 @@
   },
   "dependencies": {
     "@uraitakahito/hello-commonjs": "^1.0.8",
+    "@uraitakahito/hello-conditional-exports": "^1.0.1",
     "@uraitakahito/hello-esmodule": "^1.0.2"
   }
 }

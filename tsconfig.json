@@ -164,5 +164,4 @@
     // Enforces using indexed accessors for keys declared using an indexed type.
     "noPropertyAccessFromIndexSignature": true
   },
-  "exclude": ["dist"]
 }

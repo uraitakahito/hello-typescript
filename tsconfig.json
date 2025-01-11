@@ -43,7 +43,12 @@
 		//
 		"module": "ESNext",
 
-		// "rootDir": "./",                                  /* Specify the root folder within your source files. */
+		//
+		// Specify the root folder within your source files.
+		// If rootDir is not set, the build result will change depending on whether there are files with the .ts extension in the same folder as tsconfig.json. For more details, refer to the following link:
+		// https://www.typescriptlang.org/tsconfig/#rootDir
+		//
+		"rootDir": "./",
 
 		//
 		// Specify how TypeScript looks up a file from a given module specifier.

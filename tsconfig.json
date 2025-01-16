@@ -45,7 +45,7 @@
 
     //
     // Specify the root folder within your source files.
-    // If rootDir is not set, the build result will change depending on whether there are files with the .ts extension in the same folder as tsconfig.json. For more details, refer to the following link:
+    // If rootDir is not set, the build result will change depending on whether there are files with the .ts extension in the same folder as tsconfig.json.
     // https://www.typescriptlang.org/tsconfig/#rootDir
     //
     "rootDir": "./",

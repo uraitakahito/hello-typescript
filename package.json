@@ -12,9 +12,7 @@
     "cleandep": "npm run rmdir node_modules",
     "lint": "eslint .",
     "rmdir": "node -e \"var fs = require('fs'); try{process.argv.slice(1).map((fpath) => fs.rmdirSync(fpath, { recursive: true }))}catch(err){console.log(err)}; process.exit(0);\"",
-    "build": "tsc -b -v --listFiles",
-    "build:tsc": "tsc",
-    "build:tsup": "tsup"
+    "build": "tsc -b -v --listFiles"
   },
   "author": "",
   "license": "ISC",
@@ -28,7 +26,6 @@
     "eslint-plugin-import": "^2.31.0",
     "markuplint": "^4.11.4",
     "npm-check-updates": "^17.1.11",
-    "tsup": "^8.3.5",
     "typescript": "^5.7.2"
   },
   "dependencies": {

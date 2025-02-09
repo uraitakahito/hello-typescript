@@ -65,6 +65,11 @@ const commonWarnNamingRules = [
     format: ['PascalCase'],
   },
 
+  {
+    selector: 'typeAlias',
+    format: ['PascalCase']
+  },
+
   //
   // Type parameters, like in Array<T>, may use a single upper case character (T) or UpperCamelCase
   // https://google.github.io/styleguide/tsguide.html#identifiers-type-parameters

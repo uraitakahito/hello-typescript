@@ -1,33 +1,32 @@
 {
+  "//": [
+    "Discussion on how to write comments in package.json:",
+    "https://stackoverflow.com/questions/14221579/how-do-i-add-comments-to-package-json-for-npm-install"
+  ],
   "name": "hello-typescript",
   "version": "1.0.0",
   "description": "Type:",
   "type": "module",
   "scripts": {
-    "clean": "npm run rmdir dist",
+    "clean": "npm run rmdir dist node_modules",
+    "cleandep": "npm run rmdir node_modules",
     "lint": "eslint .",
     "rmdir": "node -e \"var fs = require('fs'); try{process.argv.slice(1).map((fpath) => fs.rmdirSync(fpath, { recursive: true }))}catch(err){console.log(err)}; process.exit(0);\"",
-    "build": "tsc -b -v --listFiles",
-    "build:tsc": "tsc",
-    "build:tsup": "tsup"
+    "build": "tsc -b -v --listFiles"
   },
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "devDependencies": {
-    "@types/fs-extra": "^11.0.4",
-    "@types/node": "^22.10.1",
+    "@types/node": "^22.12.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
-    "date-fns": "^4.1.0",
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-plugin-import": "^2.31.0",
-    "fs-extra": "^11.2.0",
     "markuplint": "^4.11.4",
-    "npm-check-updates": "^17.1.11",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2"
+    "npm-check-updates": "^17.1.14",
+    "typescript": "^5.7.3"
   },
   "dependencies": {
     "@uraitakahito/hello-commonjs": "^1.0.8",

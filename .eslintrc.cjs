@@ -65,6 +65,11 @@ const commonWarnNamingRules = [
     format: ['PascalCase'],
   },
 
+  {
+    selector: 'typeAlias',
+    format: ['PascalCase']
+  },
+
   //
   // Type parameters, like in Array<T>, may use a single upper case character (T) or UpperCamelCase
   // https://google.github.io/styleguide/tsguide.html#identifiers-type-parameters
@@ -120,6 +125,13 @@ module.exports = {
     }
   ],
   rules: {
+    //
+    // When importing ES modules without using a bundler or transpiler, file extensions are required:
+    //   https://nodejs.org/api/esm.html#esm_mandatory_file_extensions
+    //   https://github.com/import-js/eslint-plugin-import/blob/v2.17.2/docs/rules/extensions.md#examples
+    //
+    'import/extensions': ['error', 'always', { ignorePackages: true }],
+
     //
     // https://engineering.linecorp.com/ja/blog/you-dont-need-default-export
     // https://zenn.dev/odiak/articles/9aa48e892e8141

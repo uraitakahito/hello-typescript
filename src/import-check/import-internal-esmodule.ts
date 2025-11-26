@@ -1,5 +1,4 @@
-/* eslint-disable import/no-duplicates */
-/* eslint-disable no-console */
+ 
 
 // MEMO:
 // When importing ES modules without using a bundler or transpiler, file extensions are required:

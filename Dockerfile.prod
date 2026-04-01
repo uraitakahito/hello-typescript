@@ -1,0 +1,48 @@
+# Features of this Dockerfile
+#
+# - Multi-stage build: installs npm dependencies and compiles TypeScript in a build stage, then copies to distroless
+# - Based on Google's distroless image (no shell, no package manager, minimal attack surface)
+# - Runs as nonroot user (UID 65534) by default
+# - The container exits after the script completes (run-to-completion model)
+#
+# Build the Docker image:
+#
+#   PROJECT=$(basename `pwd`) && docker image build -f Dockerfile.prod -t $PROJECT-prod-image .
+#
+# Run the Docker container:
+#
+#   docker container run --rm --name $PROJECT-prod-container $PROJECT-prod-image
+#
+# Expected output:
+#   2
+#   Fizz
+#   4
+#   Buzz
+#   Fizz
+#
+
+# --- Build stage ---
+FROM node:24-bookworm-slim AS build
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN npm ci
+
+COPY tsconfig.json ./
+COPY src/ src/
+RUN npx tsc -b
+RUN npm prune --omit=dev
+
+# --- Runtime stage ---
+# distroless Node.js 24 on Debian 12 (bookworm)
+#   https://github.com/GoogleContainerTools/distroless/tree/main/nodejs
+FROM gcr.io/distroless/nodejs24-debian12:nonroot
+
+WORKDIR /app
+
+COPY --from=build /app/node_modules node_modules/
+COPY --from=build /app/dist/src/ dist/src/
+COPY package.json .
+
+CMD ["dist/src/fizzbuzz.js"]

@@ -12,14 +12,4 @@ Detailed environment setup instructions are described at the beginning of the [D
 
 ## Production
 
-Build the Docker image:
-
-```
-PROJECT=$(basename `pwd`) && docker image build -f Dockerfile.prod -t $PROJECT-prod-image .
-```
-
-Run the Docker container:
-
-```
-docker container run --rm $PROJECT-prod-image
-```
+Build and run instructions are described at the beginning of the [Dockerfile](Dockerfile.prod).

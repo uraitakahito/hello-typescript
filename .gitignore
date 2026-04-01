@@ -4,4 +4,4 @@ node_modules
 .Trash-*
 __snapshots__
 docker-entrypoint.sh
-Dockerfile
+Dockerfile.dev

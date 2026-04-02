@@ -17,4 +17,4 @@ console.log(fizzbuzz(a += 1));
 console.log(fizzbuzz(a += 1));
 console.log(fizzbuzz(a += 1));
 console.log(fizzbuzz(a += 1));
-console.log(fizzbuzz(a += 1));
+console.log(fizzbuzz(a + 1));

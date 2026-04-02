@@ -70,6 +70,30 @@ export default defineConfig(
   //
   {
     rules: {
+      //
+      // ランタイム構文の拡張を禁止 (erasable syntax only)
+      // TypeScript などのスーパーセット言語固有の新しいランタイム機能によってJavaScript の構文を拡張することは、次のような理由により、よくないことと考えられています。
+      // - 最も重要なのは、ランタイム構文の拡張は、JavaScript の新しいバージョンの新しい構文と競合する可能性があることです。
+      // - 構文の拡張により、JavaScript に不慣れなプログラマーにとって、どこまでがJavaScriptで、どこからが別の言語かを理解するのが困難になります。
+      // - 構文の拡張により、スーパーセット言語のコードを受け取り、JavaScript を出力するトランスパイラーの複雑さが増加します。
+      //
+      '@typescript-eslint/parameter-properties': ['error', { prefer: 'class-property' }],
+      'no-restricted-syntax': [
+        'error',
+        {
+          selector: 'TSEnumDeclaration',
+          message: 'Enums are not allowed. Use a union type or a const object instead.',
+        },
+        {
+          selector: 'TSExportAssignment',
+          message: 'Export assignment (`export =`) is not allowed. Use ES module export syntax instead.',
+        },
+        {
+          selector: 'Decorator',
+          message: 'Legacy experimental decorators are not allowed.',
+        },
+      ],
+
       // 命名規則 (Google TypeScript Style Guide ベース)
       '@typescript-eslint/naming-convention': [
         'warn',

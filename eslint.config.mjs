@@ -70,6 +70,24 @@ export default defineConfig(
   //
   {
     rules: {
+      // ランタイム構文の拡張を禁止 (erasable syntax only)
+      '@typescript-eslint/parameter-properties': ['error', { prefer: 'class-property' }],
+      'no-restricted-syntax': [
+        'error',
+        {
+          selector: 'TSEnumDeclaration',
+          message: 'Enums are not allowed. Use a union type or a const object instead.',
+        },
+        {
+          selector: 'TSExportAssignment',
+          message: 'Export assignment (`export =`) is not allowed. Use ES module export syntax instead.',
+        },
+        {
+          selector: 'Decorator',
+          message: 'Legacy experimental decorators are not allowed.',
+        },
+      ],
+
       // 命名規則 (Google TypeScript Style Guide ベース)
       '@typescript-eslint/naming-convention': [
         'warn',

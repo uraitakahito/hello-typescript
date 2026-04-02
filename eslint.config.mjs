@@ -77,7 +77,16 @@ export default defineConfig(
       // - 構文の拡張により、JavaScript に不慣れなプログラマーにとって、どこまでがJavaScriptで、どこからが別の言語かを理解するのが困難になります。
       // - 構文の拡張により、スーパーセット言語のコードを受け取り、JavaScript を出力するトランスパイラーの複雑さが増加します。
       //
+
+      // Parameter Properties の禁止
+      //   https://typescript-eslint.io/rules/parameter-properties/
       '@typescript-eslint/parameter-properties': ['error', { prefer: 'class-property' }],
+
+      // Enums, Export Assignment, Decorators の禁止
+      //   no-restricted-syntax: https://eslint.org/docs/latest/rules/no-restricted-syntax
+      //   Enums: https://www.typescriptlang.org/docs/handbook/enums.html
+      //   Export Assignment: https://www.typescriptlang.org/docs/handbook/modules/reference.html#export--and-import--require
+      //   Decorators: https://www.typescriptlang.org/docs/handbook/decorators.html
       'no-restricted-syntax': [
         'error',
         {

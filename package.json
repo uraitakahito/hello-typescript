@@ -15,7 +15,7 @@
     "build": "tsc -b -v --listFiles"
   },
   "author": "",
-  "license": "Apache-2.0",
+  "license": "Unlicense",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/node": "^25.5.0",

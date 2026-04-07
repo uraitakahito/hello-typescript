@@ -11,13 +11,16 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      # v6.0.2 - https://github.com/actions/checkout/releases/tag/v6.0.2
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      # v5.0.0 - https://github.com/actions/setup-node/releases/tag/v5.0.0
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444
         with:
           node-version: '24'
           cache: 'npm'
       - run: npm ci
-      - uses: reviewdog/action-eslint@v1
+      # v1.9.0 - https://github.com/reviewdog/action-eslint/releases/tag/v1.9.0
+      - uses: reviewdog/action-eslint@6fe55dfee8be1ff3c8ff89c2de4987bed9483884
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review

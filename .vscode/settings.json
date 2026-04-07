@@ -31,9 +31,9 @@
   "js/ts.tsdk.path": "./node_modules/typescript/lib",
 
   // https://code.visualstudio.com/docs/typescript/typescript-editing
-  "typescript.implementationsCodeLens.enabled": true,
-  "typescript.referencesCodeLens.enabled": true,
-  "typescript.suggest.autoImports": true,
+  "js/ts.implementationsCodeLens.enabled": true,
+  "js/ts.referencesCodeLens.enabled": true,
+  "js/ts.suggest.autoImports": true,
 
   //
   // ESLint

@@ -45,6 +45,8 @@
     "dbaeumer.vscode-eslint",
     // https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
     "esbenp.prettier-vscode",
+    // https://marketplace.visualstudio.com/items?itemName=exiasr.hadolint
+    "exiasr.hadolint",
 
     //
     // TypeScript

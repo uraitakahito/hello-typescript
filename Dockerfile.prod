@@ -31,8 +31,8 @@ RUN npm ci
 
 COPY tsconfig.json ./
 COPY src/ src/
-RUN npx tsc -b
-RUN npm prune --omit=dev
+RUN npx tsc -b && \
+    npm prune --omit=dev
 
 # --- Runtime stage ---
 # distroless Node.js 24 on Debian 12 (bookworm)

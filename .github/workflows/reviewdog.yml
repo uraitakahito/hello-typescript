@@ -25,4 +25,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           eslint_flags: '.'
-          fail_level: error
+          level: error
+          fail_on_error: 'true'

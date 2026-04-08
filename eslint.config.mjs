@@ -103,6 +103,13 @@ export default defineConfig(
         },
       ],
 
+      // type-only import に副作用を持たせない
+      // import type { Foo } from '...' を import { type Foo } from '...' と書かせない
+      '@typescript-eslint/no-import-type-side-effects': 'error',
+
+      // type import は必ず import type を使う
+      '@typescript-eslint/consistent-type-imports': 'error',
+
       // 命名規則 (Google TypeScript Style Guide ベース)
       '@typescript-eslint/naming-convention': [
         'warn',

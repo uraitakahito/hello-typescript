@@ -67,6 +67,8 @@
     "dbankier.vscode-quick-select",
     // https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github
     "GitHub.vscode-pull-request-github",
+    // https://marketplace.visualstudio.com/items?itemName=orsenkucher.vscode-graphql
+    "orsenkucher.vscode-graphql",
     // https://marketplace.visualstudio.com/items?itemName=statelyai.stately-vscode
     "statelyai.stately-vscode",
     // https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck

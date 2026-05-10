@@ -1,6 +1,12 @@
 {
   "recommendations": [
     //
+    // AWS
+    //
+    // https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-toolkit-vscode
+    "AmazonWebServices.aws-toolkit-vscode",
+
+    //
     // Git & GitHub
     //
     // https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens

@@ -1,6 +1,6 @@
-## Development
+## 開発
 
-Please download the required files by following these steps:
+以下の手順で必要なファイルをダウンロードしてください。
 
 ```
 curl -L -O https://raw.githubusercontent.com/uraitakahito/hello-javascript/refs/tags/1.3.0/Dockerfile.dev
@@ -8,8 +8,8 @@ curl -L -O https://raw.githubusercontent.com/uraitakahito/hello-javascript/refs/
 chmod 755 docker-entrypoint.sh
 ```
 
-Detailed environment setup instructions are described at the beginning of the [Dockerfile.dev](https://github.com/uraitakahito/hello-javascript/blob/1.3.0/Dockerfile.dev).
+環境構築の詳細な手順は [Dockerfile.dev](https://github.com/uraitakahito/hello-javascript/blob/1.3.0/Dockerfile.dev) の冒頭に記載されています。
 
-## Production
+## 本番環境
 
-Build and run instructions are described at the beginning of the [Dockerfile.prod](Dockerfile.prod).
+ビルドと実行の手順は [Dockerfile.prod](Dockerfile.prod) の冒頭に記載されています。

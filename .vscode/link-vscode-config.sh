@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #
-# .vscode/ 配下の *.sample.json それぞれについて、"sample" を取り除いた名前で
+# .vscode/ 配下の *.sample.jsonc それぞれについて、"sample" を取り除いた名前で
 # シンボリックリンクを作成する。
 #
-#   例: launch.sample.json  →  launch.json（symlink）が launch.sample.json を指す
+#   例: launch.sample.jsonc  →  launch.json（symlink）が launch.sample.jsonc を指す
 #
 set -euo pipefail
 
@@ -12,16 +12,16 @@ set -euo pipefail
 vscode_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 
 shopt -s nullglob
-samples=("${vscode_dir}"/*.sample.json)
+samples=("${vscode_dir}"/*.sample.jsonc)
 
 if (( ${#samples[@]} == 0 )); then
-  echo "エラー: ${vscode_dir} に *.sample.json が見つかりません。" >&2
+  echo "エラー: ${vscode_dir} に *.sample.jsonc が見つかりません。" >&2
   exit 1
 fi
 
 for sample in "${samples[@]}"; do
-  base="$(basename -- "${sample}")"        # 例: launch.sample.json
-  link="${base%.sample.json}.json"          # 例: launch.json
+  base="$(basename -- "${sample}")"        # 例: launch.sample.jsonc
+  link="${base%.sample.jsonc}.json"          # 例: launch.json
   link_path="${vscode_dir}/${link}"
 
   # 既存の「実ファイル」（シンボリックリンクでない）は壊さない。

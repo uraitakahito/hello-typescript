@@ -11,24 +11,24 @@ security add-generic-password -a "$USER" -s development-pat -w
 以下の手順で必要なファイルをダウンロードしてください。
 
 ```
-curl -L -O https://raw.githubusercontent.com/uraitakahito/hello-javascript/refs/tags/1.5.0/Dockerfile.dev.docker
-curl -L -O https://raw.githubusercontent.com/uraitakahito/hello-javascript/refs/tags/1.5.0/docker-entrypoint.sh
+curl -L -O https://raw.githubusercontent.com/uraitakahito/hello-javascript/refs/tags/1.5.1/Dockerfile.dev.docker
+curl -L -O https://raw.githubusercontent.com/uraitakahito/hello-javascript/refs/tags/1.5.1/docker-entrypoint.sh
 chmod 755 docker-entrypoint.sh
 ```
 
-環境構築の詳細な手順は [Dockerfile.dev.docker](https://github.com/uraitakahito/hello-javascript/blob/1.5.0/Dockerfile.dev.docker) の冒頭に記載されています。
+環境構築の詳細な手順は [Dockerfile.dev.docker](https://github.com/uraitakahito/hello-javascript/blob/1.5.1/Dockerfile.dev.docker) の冒頭に記載されています。
 
 ### Apple Container を使う場合
 
 macOS 26 以降（Apple Silicon）で利用できます。以下の手順で必要なファイルをダウンロードしてください。
 
 ```
-curl -L -O https://raw.githubusercontent.com/uraitakahito/hello-javascript/refs/tags/1.5.0/Dockerfile.dev.container
-curl -L -O https://raw.githubusercontent.com/uraitakahito/hello-javascript/refs/tags/1.5.0/docker-entrypoint.sh
+curl -L -O https://raw.githubusercontent.com/uraitakahito/hello-javascript/refs/tags/1.5.1/Dockerfile.dev.container
+curl -L -O https://raw.githubusercontent.com/uraitakahito/hello-javascript/refs/tags/1.5.1/docker-entrypoint.sh
 chmod 755 docker-entrypoint.sh
 ```
 
-環境構築の詳細な手順は [Dockerfile.dev.container](https://github.com/uraitakahito/hello-javascript/blob/1.5.0/Dockerfile.dev.container) の冒頭に記載されています。
+環境構築の詳細な手順は [Dockerfile.dev.container](https://github.com/uraitakahito/hello-javascript/blob/1.5.1/Dockerfile.dev.container) の冒頭に記載されています。
 
 ## 本番環境
 

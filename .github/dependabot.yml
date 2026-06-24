@@ -21,20 +21,6 @@ updates:
       development-dependencies:
         dependency-type: development
 
-  # --- Docker base images ---
-  - package-ecosystem: docker
-    directory: /
-    target-branch: develop
-    schedule:
-      interval: weekly
-      day: monday
-    open-pull-requests-limit: 5
-    # Let a new base-image tag settle for 7 days before proposing it.
-    cooldown:
-      default-days: 7
-    labels:
-      - docker
-
   # --- GitHub Actions ---
   - package-ecosystem: github-actions
     directory: /

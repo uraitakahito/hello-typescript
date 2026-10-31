@@ -1,0 +1,4 @@
+# Stay on TypeScript 6.x until typescript-eslint supports TypeScript 7
+# (same hold as the ignore rule in .github/dependabot.yml).
+reject:
+  - typescript

@@ -2,7 +2,6 @@
 import eslint from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
-import importXPlugin from 'eslint-plugin-import-x';
 
 export default defineConfig(
   //
@@ -28,40 +27,6 @@ export default defineConfig(
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
       },
-    },
-  },
-
-  //
-  // Import plugin configuration
-  //
-  {
-    plugins: {
-      'import-x': importXPlugin,
-    },
-    settings: {
-      'import-x/resolver': {
-        typescript: true,
-        node: true,
-      },
-    },
-    rules: {
-      // ES モジュールのファイル拡張子を必須化
-      // TypeScript では .ts ファイルを .js 拡張子でインポートするため、
-      // ts/tsx は 'never' に設定し、js/mjs/cjs は 'always' に設定
-      'import-x/extensions': [
-        'error',
-        'always',
-        {
-          ignorePackages: true,
-          checkTypeImports: true,
-          pattern: {
-            ts: 'never',
-            tsx: 'never',
-          },
-        },
-      ],
-      // 匿名デフォルトエクスポートを禁止
-      'import-x/no-anonymous-default-export': ['error', { allowCallExpression: false }],
     },
   },
 
@@ -100,6 +65,28 @@ export default defineConfig(
         {
           selector: 'Decorator',
           message: 'Legacy experimental decorators are not allowed.',
+        },
+        //
+        // ES モジュールのファイル拡張子を必須化（相対パスの import / export / import()）
+        // TypeScript では .ts ファイルを .js 拡張子でインポートするため、.ts / .tsx は禁止
+        //
+        {
+          selector:
+            ':matches(ImportDeclaration, ExportNamedDeclaration, ExportAllDeclaration, ImportExpression)[source.value=/^\\.{1,2}(?:\\/|$)/]:not([source.value=/\\.[A-Za-z0-9]+$/])',
+          message: 'Relative imports must include the file extension (e.g. `./foo.js`).',
+        },
+        {
+          selector:
+            ':matches(ImportDeclaration, ExportNamedDeclaration, ExportAllDeclaration, ImportExpression)[source.value=/^\\.{1,2}\\/.*\\.tsx?$/]',
+          message: 'Import TypeScript files with the `.js` extension, not `.ts` / `.tsx`.',
+        },
+        //
+        // 匿名デフォルトエクスポートを禁止
+        //
+        {
+          selector:
+            'ExportDefaultDeclaration > :matches(ArrayExpression, ArrowFunctionExpression, CallExpression, ClassDeclaration:not([id]), FunctionDeclaration:not([id]), Literal, NewExpression, ObjectExpression, TemplateLiteral)',
+          message: 'Anonymous default exports are not allowed. Export a named declaration instead.',
         },
       ],
 
@@ -173,7 +160,6 @@ export default defineConfig(
     files: ['vite.config.*[cmjt]*s', 'vitest.config.*[cmjt]*s'],
     rules: {
       '@typescript-eslint/naming-convention': 'off',
-      'import-x/no-extraneous-dependencies': 'off',
     },
   },
 );

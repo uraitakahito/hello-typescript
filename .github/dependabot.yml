@@ -12,6 +12,11 @@ updates:
     # too new for safe-chain's minimum-age check don't produce red PRs.
     cooldown:
       default-days: 7
+    # Stay on TypeScript 6.x: typescript-eslint does not support TypeScript 7
+    # yet (peer range <6.1.0). Remove once it does (typescript-eslint#10940).
+    ignore:
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
     labels:
       - dependencies
     groups:
